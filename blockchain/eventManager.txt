@@ -1,0 +1,17 @@
+Organizer:-
+            it create event and distribute tickets
+Attendee:-
+            buy ticket and enjoy it
+
+Complex mapping=>
+     mapping (address=>mapping(uint=>uint)) public tickets;
+
+                    id1                             id2
+     
+     Address1    tickets[address1][id1]
+
+     Address2                                tickets[address2][id2]
+
+     Address3    tickets[address3][id1]      tickets[address3][id2]
+
+     here id are events id, address is user address

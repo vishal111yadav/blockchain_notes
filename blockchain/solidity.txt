@@ -1,0 +1,45 @@
+Remix Ide->deploy development administer
+
+Remix important point:-
+ language supporeted:-Solidity and viper
+ Written in:-javascript
+ Modules:-Testing,Debugging,Deploy
+
+Smart contract compilation:-
+
+                                                |-------->Abi
+    contract ----------->Solidity Compiler------|
+    source.sol file                             |_________>Byte code------>Etherium blockchain
+
+    ABI->(abstract binary interface)if any other smart contract or any application want to communicate with 
+         our smart contract it need this abi file.
+         it at like bride between our smart contract and application
+
+    Byte Code-> it only deploy on blockchain(it is the actual thing which run on each node on eth blockchain)
+
+    1.contract Byte code is public in readable from
+    2.contract doesn't have to be public
+    3.bytecode is immutable
+    4.abi act as a bride between application and smart contract
+    5.abi and bytecode cannot be generated without source code
+
+        MainNet                                         TestNet
+    used for actual transaction                     used for Testing
+    network id is 1                                 network id is 3,4,42
+
+    ex:- masterthecrypto.com    
+
+modifier:-
+    is a type of function which can only be called by one which we want
+    ex:-
+     modifier onlyManager(){
+        require(msg.sender==manager,"only manager can call this function");
+        _;
+    } 
+     function createRequests(string memory _description,address payable _recipient, unit _value)public onlyManager{
+        
+    }
+
+note:- if we ever use structure and use mapping in it then we are not able to use memory keyword on that function  we always use storage in that function 
+    
+

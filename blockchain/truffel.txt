@@ -1,0 +1,48 @@
+truffle overview:-
+        ganache
+        writing contract in vs code using truffle
+        truffle compilation
+        truffle migration
+        infura
+        deploy contract on TestNet
+        frontEnd intigration
+
+preRequisites:-
+        Solidity
+        remix IDE 
+
+system Requirments:-
+        node js
+        Metamask
+        ganache
+        cs code
+
+GAnache:-
+          local blockchain simulator
+           ->develop
+           ->deploy
+           ->test
+        
+truffle:-
+       it provides us a devlopment enviroment via we easily made dapp 
+       ->sudo sudo npm install -g truffle
+       ->truffle init
+       ->truffle compile            
+        deployment on ganache via truffle:-
+        ->create new file under mmigration folder like 1_demo_migration.js(we made that name beause via number we priotize the contract deployment) 
+        ->paste that code(dont forget to change the name i made contract demo.sol) 
+                const demo = artifacts.require("demo");
+
+                module.exports = function (deployer){
+                    deployer.deploy(demo);
+                };
+        ->now go to truffle-config.js
+        ->networks uncomment development:{} dont change anything init just uncomment it
+        ->now go to ganache and check port number and match it with development port number
+        ->then go terminal and ->truffle migrate
+        ->truffle migrate --reset ()
+
+
+
+
+

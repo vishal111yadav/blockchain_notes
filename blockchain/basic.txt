@@ -1,0 +1,41 @@
+Blockchain(BC):-
+     it is adistributed immutable ledger(Khata ,hisab book) which is completly transparent
+     ->in blockchain ledger is a block which is immutable(jise mitaya ni ja sake because its distributed in blockchain)
+Application of BC:-
+      main are 4
+      1 product tracking
+      2 smart contract
+      3 healtcare system
+      4 international wire transfer
+hashing algorithum:-
+      a block cantain of mianly 4 things
+      1 block no
+      2 data
+      3 prev hash->if a prev block doesn't point any prev block thrn it called genesis block
+      4 hash ->it genrated via SHa 256 algorithum
+hash algorithum have 5 requirment:-
+      1 one way:- data->encripted data only not reverse
+      2 deterministic:- one input one output like if we gave (abc ->845) it return 845 always like if we gave abc thousand time it only return 845 each time like it is fixed
+      3 fast computation
+      4 witstand collision :- not hakable(easily)
+      5 avalance effect:- like 1 bit change of any document it will create a whole new hash
+      ex https://passwordsgenerator.net
+p2p network:-
+      data not store in one place it distributed to all clients and its not mandatory that one client have one data like a have data same data also be found at b.
+blockchain Mining:-
+      every transaction store in an area called manpool now group of transaction pick that transaction on that manpool and they want add that lock on their chain then they have to solve an  mathematical problem when one can solve it they block is created for him now that person broadcast that block and group of miner verify it and after its verification he gave reward
+byzantine generals problem:-
+      1/3 nodes are attackers(hackers) so it happen or 1/3 are nodes are honest   like majority rule
+consensus protocol:-
+  it help in two things
+      1 prevent attack:-
+        mainly ts an algorithem which is used by nodes to verify a block before adding an block its like an algorithum
+      2 competing chain problem:-
+        it is used when a block is mined simultaniously by 2 or more node then which ever node have longest chain other node have to acccept it and they have to discard their block
+     there are two mainly types of consensus protocol
+     1 proof of work(POW):-
+        if miner want to add an block to it chain it require a bunch of work like math problem solve 
+     2 proof of stack(POS):-
+
+
+    

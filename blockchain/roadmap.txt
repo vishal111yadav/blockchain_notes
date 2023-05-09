@@ -1,0 +1,17 @@
+Blockchain developed:-
+        1.Blockchain core developer
+        2.Blockchainn s/w developer:-
+            1.frontend
+            2.Backend
+            3.smart contract
+            4.database
+
+things to be in knowledge:-
+        1.ipfs
+        2.cryptography
+        3.truffle
+        4.nft.
+        5.defi
+        6.geth
+
+

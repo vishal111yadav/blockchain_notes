@@ -1,0 +1,175 @@
+Etherium->
+    created by vitalik buterin at age 19
+    it start run program on block means(smart contract) we can create decentralization app
+    bitcoin hume token nahi but etherium deta hai jiski help se hum program run kar sakte hai
+
+Etherium Nodes->
+    all system are in etherium network are nodes/clients
+    Types of nodes:-
+    1.full node:-
+                generally miners are because full node responsibility is verification validity of entire network transaction
+                (locally store a copy of entire blockchain)
+    2.light node:-
+                just use network for transaction
+                (stores only the block header, fully depand on full node)
+    3.archive node:-
+                stores everything kept in full node and built an archiveof historic data
+                requires terabyte of diskspaces
+
+Etherium Accounts:-
+    It is an entitywith an ether(ETH) balance that can send or recieve transaction on etherium
+    Types of Etherium Accounts
+    1.externally owned account(EOA):-
+        it created when we add wallet,
+        it is used for send/recieve transaction or to interacr smart contract
+    2.contract account(CA):-
+        it is controlled by contract code
+        it only created when we deploy our smart contract
+        it that block in which we put our smart contract and it have an address like other block
+
+                EOA                                                     CA
+            private key needed           |  no public and private key needed
+            controlled by human          |  controlled bu contract code
+            no gas associateed           |  gas associated
+            have unique address          |  have unique address 
+                hold eth balance         |  hold eth balance 
+
+Smart Contract:-
+    it is  program that run on our eth blockchain
+    it used scripting language "solidity" (it is turing complete:- means we can create logic here) 
+    we can implement loops in eth
+         _____________________________    
+        |   block no                  |  
+        |   noncs                     |
+        |   Timestamp                 |
+        |   transaction               |
+        |   smart contract            |
+        |   data                      |
+        |   prev hash                 |
+        |       hash                  |
+        |_____________________________|
+
+Decentralized Application(Dapps):-
+    smart contract(Backend) + front end
+    ex:-search engine ->presearch
+        twitter-->lbry
+        youtube-->d.tube
+
+Etherium virtual machine(EVVM):-
+    dapp is not run on system is run on evm 
+
+Etherium Gas:-
+    if we want to run eth smart contract on blockchian it need some particular operation that need gas
+    every operation have particular gas 
+    the user that generate transaction has to pay gas
+    ex 
+    + need 3 gas
+    - need 3 gas
+    * need 5 gas
+    \ need 5 gas
+    = need 3 gas
+    to view all operation gas value visit Ethereum Gas Chart - https://github.com/djrtwo/evm-opcode-gas-costs
+
+Gas Price:-
+    it is the amount the sender wants to pay per unit of gas to get the transaction mined, gas price is set by the sender
+    gas price are denoted in gwei(1gwei=10^-9 eth)
+    the higher the gas price the faster the transaction will be mined,it just like bitcoin transaction
+
+Ethereum gas limit:-
+    gas limit is the max gas the transaction can consume
+    set by sender
+    ex:
+    let say A want to send B 2 Eth:-
+    A set the gas price per unit =100gwei
+    transaction gas limit =2100 unit
+    total fee=gas unit(limit)* gas price per unit
+    total fee=2100*100=210000gwei or 0.0021 ETH
+
+Decentralized Autonomous Organization (DAOS):-
+                               smart contract
+                                     |
+                                     |
+                            -------------------------
+                            |                        |
+                            |                        |
+                        smart contract         smart contract
+        |----------------------------------------------------------------------------
+        |        DAOS                              |          traditional Organization
+        |-----------------------------------------------------------------------------
+        |    fully democratized                    |           usually hierarchical
+        |    voting require                        |          voting may or may not require
+        |no trusted intermediary                   |          intermediary require to count vote or out come handle manually
+        |service handle automatically              |          require human handling or centralised control automatation
+        |all activity transparent and fully public |        all activity mainly private and limited to public
+
+The Dao Attack:-
+                    The Dao is an Organization
+                            
+                    the dao    <-------------------------people
+                    |               give eth                |
+                    |           ------------------------->  |
+                    |                  dao token            |
+                    |                                       |    
+                  investments proposal <--------------------
+                                            vote
+
+Hard Fork:-
+        due to some problem in the dao smart contract hacker were able to extract money 
+        to stop this commitee decide to upgrade smart contract it divided it into 2 chain(Ethereum classic ,Ethereum new version)
+        1.during a hard fork s/w implementation a protocol and its mining process is upgrade
+        2.once a user upgrade their s/w that version reject all transaction from old s/w effectively create anew branchof blockchain
+        3.however those users who retain the old s/w continue to process Transaction
+
+soft fork:-
+        soft forks are a change to protocol but the end product same
+        a soft forks is a backward-compatible upgrade meaning that the upgrade node still communicate with non upgrade nodes and who have longest chain win 
+
+Initial coin offering(ICO's):-
+        it the token which people buy it is like an bouchers which made coin cheap
+
+Ethereum 2.0(serenity):-
+        it follow scalability
+        it have more security
+        it is more sustainable
+    it have major upgrades:
+        1 proof of stake(POS):-
+            pos dont have miners it have validators 
+            to become validator the person need to give some ethers(32 eth) to system
+            now the work of validator is to attach blocks(attachtation)
+            if validator work honestly her ether return + transaction fee(attachtation)
+            if validator doesn't work honestly he dong get ether return and no transaction fee return
+            here system select the validator via randomness
+            and here randomness is selected by the number of ether you put on stack
+
+        |----------------------------------------------------------------------------
+        |        proof of work                     |         proof of stack
+        |-----------------------------------------------------------------------------
+        |    miners                                |           validator
+        |  high performance h/w req                |            mobile laptop enough
+        |lots of electricity req                   |          not much electricity req
+        |the morehashing power you                 |         the more eth you put on stack the more block you validate
+        |        have more block you validate      |
+        | attack to happen 51% hasing power is req |      attack to happen 51% of stack is req
+        |competition is high here                  |      random selection here
+        -----------------------------------------------------------------------------------
+        2 sharding:-
+                it is a process to split long blockchain into small db and then we distribute a these small db into differnt network
+                so particular set of miner can only acces a small db
+            major advantages:-
+            1.transaction per sec increases
+            2.powerful and expensive computer will not be needed
+            3.more validator join
+            4.energy consuption reduce
+
+            beacon + etherium = beacon+etherium +  shard  = Ethereum +beacon shard chain
+            chain     mainNet                       chain
+
+Alt coin:-
+        despite bitcoin all other coin are alt coin(coins other than bitcoin)
+        ex investopedia.com
+       
+
+    
+
+
+    

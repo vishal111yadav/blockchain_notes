@@ -1,0 +1,6 @@
+Metamask is used for:-
+        Store Ether
+        Send ether
+        receive Ether
+        Run Dapps
+        Swap token

@@ -1,0 +1,28 @@
+cryptography:- 
+    sender-->encryption-->decryption-->receiver
+Two type's of cryptography:-
+    symmetric:-
+        sender generate a key and the encryption happen using that key which sender generate and that using same key receiver decrypt the message 
+        if receiverdoesn't have same key he is unable to decrypt
+        sender---->(message/key)--->receiver
+        so a hacker can compromise the message because a sender have to send message with a key
+    Asymmetric:-
+       A public key                                       B  public key
+       A private key                                      B  private key     
+            A --------------------------------------------->B
+
+    A's public key we can encrypt the message and with the use of A's private key we can decrypt the message
+
+           B public key                                       A  public key
+           A private key                                      B  private key     
+                   A --------------------------------------------->B
+
+    as we know a can have b public key for use as b public key is public
+
+    now for encryption a use b public key so when data send to b so with the use of b private key b can decrypt the data
+
+
+cryptography in blockchain:-
+        private key+message =>signature
+
+        for verification the miner use signature +message+public key to verify that transaction is is from right person or not

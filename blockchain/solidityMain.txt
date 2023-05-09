@@ -1,0 +1,294 @@
+Solidity:-
+    High -level statically typed programming language
+    with solidity you can create contracts for using as voting,crowd funding,blind auction,and muti-signature wallet
+    case sensitive
+    for latest update visit solidity documentation
+
+State variables:-
+         it stores in blockchain permanently in contract storage in retuen we have to pay gas
+         it dont have null concept it all have default value
+         whenever we put public in any function or variable  it automatically create a get function
+         we dont able to assign value after declaration we have to make constructor or assign at the time of declaration
+            or we made a set function
+             ex:-unit public age=10; or unit public age; constructor (){ age=10;} or unit public age; function setAge() public { age=10;}
+        all variable declaration is on compile not dynamicaly time we dont redeclare any variable value after deploy
+   ex:-
+     uint ->unsigned state variable
+    
+Local variable:-
+        variable which defines in function body
+        it doesn't require gas
+        it stores in stach not in contract storage
+        pure function means it didnot read state variable and not change it
+        some datatypes are default store is contract storage despite of local or state
+        ex string 
+         if we want to store string in stact we have to use memory
+            ex string memory namr="ravi";
+        memory keyWord cannot be used at contract level
+    
+Functions- setters and getters
+    by default variable visibility is public
+        getter function :-
+        we dont have to pay gas
+        it doent change any varable so we use view/pure and we only want ro see
+          function getter() public view returns(uint){
+            return age;
+          }
+        
+        setter function:-
+        we have to pay gas
+         function setter() public{
+            age=age+1;
+         }
+        we can also able to pass argument in function
+        ex:-
+         function setter(uint newAge) public{
+            age=newAge;
+         }
+        if we create a public state variable then for it we dont have to create a getter function
+            ex:-
+             unit public age 10;
+
+view vs pure:-
+      both uses when we dont want to modify an varible in a function
+
+                    pure                                                                 VIEW
+      we don't use pure when a function read or write a state variable              we use view when a function read a state variable 
+
+Constructor:-
+    it is a special type of function which execute one time when we create our contract 
+    constructor creation is optional but  you can create only one constructor
+    it used to intialized state variable
+    it used to decide the owner of our contract 
+    constructor is also used with argument
+    ex:- constructor(uint new_count){count=new_count}
+
+Integer:-
+    int  or uint signed and unsigned integers can be of various sizes
+    int8 to int256   uint8 to uint256
+    int alias to int256    uint alias to uint256
+    default int intialized 0
+    overflow get detected at compile time
+
+Arrays:-
+    array are 2 types in our Solidity
+    1 fixed size array:-
+        in which at compile time know the length of array
+        ex:- uint[4] public arr=[10,20,30,40];
+    2 dynamic syze array:-
+        in which we can manipulte seize of arrray
+        ex:- unit[] public arr;
+        push in array:-
+                 function pushElement(uint item) public{
+                   arr.push(item);
+                        }
+        pop in array:-
+                it will remove the last element of array:-
+                  function popElement() public {
+                 arr.pop();
+                  }
+
+Byte Array:-
+    1 byte =8 bit;
+    1 hexadecimal digit =4 bits
+    1 byte= 2 hexadecimal
+    everything that will be stored in the byte array will be in the form of hexadecimal digits
+    ex:-
+                contract Array {
+                bytes3 public b3; //3 bytes arrray
+                bytes2 public b2; //2 bytes arrray
+
+            function setter() public {
+
+                b3="abc"; 
+                b2="ab";
+            }
+            ___________________ 
+            |__61_|_62__|__62_|  ==>Byte array
+            output:- b2 =0x6162, b3=0x616263 Acii value of abc
+    padding of zer0:-
+                if we declare 2 byte array :- bytes2 but gave value only one like 'a' not 'ab output be 0x6100
+    byte array is immutable we can't change a value of particular place b3[0]or b2[1] is not allowed
+
+dynamic byte array:-
+    ex:-
+                contract dynamicByteArray{
+                bytes public b1="abc";
+
+                function pushElement() public{
+                    b1.push('d');
+                }
+
+                function getElement(uint i) public view returns(bytes1){
+                        return b1[i];
+                }
+
+                function getLength () public view returns (uint){
+                    return  b1.length;
+                }
+            }
+
+loops in solidity:-
+     3types of loop:
+     while:
+         function whileLoop() public{
+         while(count<arr.length)
+         {
+             arr[count]=count;
+             count++;
+         }
+     }
+     for:-
+              function forLoop() public{
+         for(count;count<arr.length;count++)
+         {
+             arr[count]=count;
+         }
+     }
+     do-while:-
+               function dowhileLoop() public{
+            do{
+             arr[count]=count;
+             count++;
+            }while(count<arr.length);
+      
+     }
+
+If-Else:-
+     function check(int a) public pure returns(string memory){
+
+        string memory value;
+        if(a>0)
+        {
+            value="is greater than zero";
+        }
+        else if(a<0)
+        {
+            value="is less than zero";
+        }
+        else if(a==0)
+        {
+            value="is equal than zero";
+        }
+
+        return value;
+    }
+
+Booleans:-
+        bool public  value=true;
+
+    function check(int a) public returns (bool)
+    {
+        if(a>100)
+        {
+            value=true;
+            return value;
+        }
+        else 
+        {
+            value=false;
+            return value;
+        }
+    }
+Struct:-
+        it is a complex data type which form by other data type by us
+        strunct is mainly use in storage if we want to use it as an function we have to use memory
+        we can made struct outside of contractor inside of it
+            If we made it out side it can used by multiple contract
+      ex:-
+        struct school{
+            uint roll;
+            string name;
+        }
+
+enum:-
+       when we assign a name to particular integer ,const or integral vaue;
+       we can make enim inside or outside the contract;
+
+       ex:-
+           enum user{allowed,not_allowed,wait}
+                user public u1=user.allowed;
+                uint public lottery =1000;
+                function owner() public {
+                    if(u1==user.allowed){
+                        lottery=0;
+                    }
+                }
+                function changeOwner() public{
+                    u1=user.not_allowed;
+                }
+
+Mapping:-
+        concept of keys and value mapping(key=>value);
+        the key can't be type mapping,dynamic array,enum,struct
+        the value can be of any type
+        mapping are always stored in storage irrespective of weather they are declared in contract storage or not
+        ex:-
+            contract map{
+                mapping (uint=>string) public roll_no;
+
+                function setter(uint key,string memory value) public{
+                    roll_no[key]=value;
+                }
+                }
+    mapping on struc:-
+            ex:-
+                        contract structmMapping {
+                struct Student {
+                    string name;
+                    uint class;
+                }
+
+                mapping(uint=>Student) public data;
+
+                function setter(uint _roll,string memory _name,uint _class) public{
+                        data[_roll]=Student(_name,_class);
+                }
+                
+                }
+
+
+Storage VS memory:-
+   
+        Storage                                                    memory
+  __________________________________________________________________________________________       
+    hold state variable                                     hold local variale defined inside function
+                                                            if they are reference type
+    persistent(permanent store)                               not persistent
+    Cost gas                                                   no gas
+    like a computer HDD                                       like a computer RAM     
+--------------------------------------------------------------------------------------------------
+
+Global variable:-
+        these are some build in variable in solidity
+        ex.
+              function getter()  public view returns(uint block_no,uint time,address sender)
+                {
+                    return(block.number,block.timestamp,msg.sender);
+                }
+     for more golbal variable search solidity documents unit and golbal variable
+
+Contract Balance:-
+        ether transaction in our contract
+        we use payable when we want to transfer some ether to out contract
+        address is a datatype by which we fetch balance and other things 
+                ex:- function getBalance() public view returns (uint)
+                        {
+                            return address(this).balance;
+                        }
+       if we want to tranfer ether from contract to address we use this payable user address
+       then use transfer key word
+       ex:-
+        address payable user= payable (0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB);
+          function sendEtherAccount() public
+                {
+                user.transfer(1 ether);    
+                }
+
+visibility:-
+        public      private     internal        externally
+        outside       X             X            outside
+        WithIn      WithIn       WithIn             X
+        Derived       X          Derived          Derived
+        Other         X             X              Other 
+         

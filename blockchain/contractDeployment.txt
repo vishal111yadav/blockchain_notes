@@ -1,0 +1,10 @@
+Remix contract deployment:-
+        vm (virtual machine):-
+             transaction will be executed in sandbox
+             Own memory blockchain
+             Ideal for testing
+        Injected Web 3:-
+            Deploy a contract or run a transaction on etherium main or test net.
+        Web3 Provider:-
+            connect to a remote node and etherium clients
+            

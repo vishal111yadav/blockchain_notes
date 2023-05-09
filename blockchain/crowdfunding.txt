@@ -1,0 +1,23 @@
+Crowd Funding:-company take money from people
+
+
+                                  it withdraw ether by crowd PERMISSION >  50%  
+                    manager -------------------------------------------------                                                        
+                    (Represent the company)                                 |
+                        |                                                   |
+                        |                                                   |        crowd
+                        |                                                   |        |  | 
+      ------------------------------------                                  |        |  |
+      |                 |                |                                  |        |  |
+      |                 |                |                                  |        |  | 
+      |                 |                |                                  |        |  | 
+      target          deadline        MIN contribution                      |        |  | 
+        |              |                 --------------------------------- smart contrAct
+        |              |                               ether                         |
+        |              |                                                             |   
+        |              |                                                             |
+        |--------------|-------------------------------------------------------------- 
+                    if deadline/target doesn't match the crown retrive their money 
+                    via smart contrAct but not able to before the deadline or if tatget reached
+
+    

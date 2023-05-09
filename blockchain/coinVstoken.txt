@@ -1,0 +1,19 @@
+coin vs token:-
+        technolgy            blockchain
+        protocol/coin      waves   bitcoin    Etherium
+        token             wgb-->intl bi-->wgr     trx-->rep snt-->ae 
+
+protocol:-
+        set of rules
+        like bitcoin and Etherium etc is a protocol 
+      Rules examples:-
+        how participant over the network will communicate
+        how authentication over the network will take place
+        how minning will happen and how reward will be given to the minners  
+   
+coin:- ex https://coinmarketcap.com/
+    every protcol provide some coin
+
+Token:-
+     token are a type of cryptocurrency that represents an asset or specifyuse and reside on their blockchain
+     ex token in nasta corner

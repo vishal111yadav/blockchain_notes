@@ -1,0 +1,16 @@
+what we gonna learn
+    Deployment of smart contract on etherium blockchain
+    role of meta Metamask
+    role of test network
+
+algorithem
+    
+     participants>=3 -----------2eth--------->contract
+                      <--contract balance----------Address
+    
+    participants must have wallet
+    a participant can transfer ether more than one time but the transfer ether must be 2 ether
+    as the participant will transfer ether its address will be register
+    manager have full control over the lottery
+    the contract will bw reset once a round is completed
+    

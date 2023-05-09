@@ -1,0 +1,20 @@
+Ether.js:-
+        the ether.js library aims to be a complete and compact library for interaction with the etherium blockchain and its ecosystem
+
+Common terminology:-
+    provider:- A provide(in ether) is a class which provides an abstraction for a connection to etherium
+                   network. it provides read-only access to the blockchain and its status.
+                 i,e:- provider hum tab use karte hai jab hame blockchain ko read karna hota hai
+
+    signer:- A signer is a class which (usually) in some way directly or in directly has access to a 
+                    private key,which can sign messages and transaction to authorise the network to charge 
+                    your account ether to perform operations.
+                i,e:- jab bhi apko koi aisi cheez karni hoti jo ki blockchain ke state me change lati ho tab use karte hai
+
+    contract:- A contract is an abstraction which represent a connection to a specific contract on the etherium
+                    network,so that application can use it like a normal javascript object.
+                i,e:-contract ke sath interact karne ke liye use hota hai
+
+Practicle :-
+        to install ether libraby we use:- npm install --save ethers
+        we can become node with the use of infura

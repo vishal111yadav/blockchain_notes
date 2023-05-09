@@ -1,0 +1,159 @@
+Bitcoin:-
+    Tech:-  blockchain is a technology but bitcoin is a protocol which uses bitcoin tech.
+    Coin:-  when a protocol is developed a coin is associateed with it so all the transaction happen it is happened via this coin.
+    Tokens:- they used mainly for investments,token uses platform like bitcoin ,etherium etc,it is ICO(initial coin offering)
+             they are list out in coinmarketcap.com 
+Bitcoin monetory policies:- get more info at:- blockchain.com
+    it is basically maintain the supply of money,
+    satoshi gave 2 principle for bitcoin monetory policies;-
+    1. the halving:-
+        it is like in every four year or when block number reached  210000 then the bitcooin supply get halved and satoshi put limit on supply of bitcoin which is 21 million
+    2. block frequency:-
+        on an average it will take 10 min to create a new block
+Blockchain Mining:-
+    Transaction-->solve math problem-->miner who solve first-->other miner verification-->block added
+    Noncs->"nonce is the number that blockchain miners are solving for"
+        the whole mathimatical problem is to generate that hash
+        block no,data,prev hast is immutable so it overall depend on nonce to generate hash of new block 
+        so different value of noncs generate different hast we just have to get the bulls eye
+        ex-> demoblockchain.org/block
+         _____________________________    
+        |   block no                  |  
+        |   xxx /noncs                |
+        |   data                      |
+        |                             |
+        |   prev hash                 |
+        |       hash                  |
+        |_____________________________|
+
+Target:-
+    1.target is number used in Mining
+    2. it is a number that a block hash must be below for the block to be added on the blockchain
+    3. the target adjust every 2016 blocks(roughly 2 weeks) to try and ensure that block are mined 
+       once every 10 min on average
+
+Rate of generating hashes:-
+    million hashes(mh)
+        cpu<10 mh/sec
+        gpu<1 gh/sec
+        asic>1000 gh/sec
+
+Minning pool:-
+    a bunch of computer solve an problem and earn a block and the profit is distributed accoding the number of hashing that particular system generate
+    ex. blockchain.com ->products->charts->hashrate distribution
+
+nonce range:-
+    nonce is a 32 bit number 2^32, range 0 to  4 billion 4*10^9
+    sha 256 16^64 range 0 to 10^ 77 (total no of possible hashes generated)
+    so,
+      10^77>>>>>>10^9
+      there are not enough nonce to generate the valid hash
+    a modest nonce generate 10^8 hash/sec
+    4*10^9 nonce will be covered in (4*10^9)/(10^8)=40 sec all nounce exausts so the miner never hit the target?
+         _____________________________    
+        |   block no                  |  
+        |   noncs                     |
+        |   data                      |
+        |                             |
+        |   prev hash                 |
+        |       hash                  |
+        |_____________________________|
+
+Timestamp:-
+
+         _____________________________    
+        |   block no                  |  
+        |   noncs                     |
+        |   Timestamp                 |
+        |   data                      |
+        |   prev hash                 |
+        |       hash                  |
+        |_____________________________|
+
+        timestamp contain unix time(it is time when unix start to till date)
+        so with each sec when timestsmp change due to avalanch effect new hases created so miner never exaust its nonce and after a sec it will again start with 0 nonce
+        currunt hashing rate 360 million trillion hashes/sec
+Mempool:-
+        it is an are where all unconfirm transaction takes place
+        it contain transaction id and fee this fee given to miner for the verificationof that transaction
+
+         _____________________________         mempool
+        |   block no                  |     fhjgdfghfgh fee:0.008
+        |   noncs                     |     fddfdfddfgh fee:0.07
+        |   Timestamp                 |     fsdfghdfghj fee:0.0876564    
+        |   Transaction               |     sdfghjkfghj fee:0.043454
+        |   prev hash                 |     ertyuihjghj fee:0.0784    
+        |       hash                  |     ertyucvbnmd fee:0.08564
+        |_____________________________|     cvgbhnjbnmn fee:0.0544
+
+        1.mempool is not a centralised area
+        2.every mempool is associateed with each node and each minner which is in that network
+
+Transaction and Utxos:-
+        utxos->unspend transaction output
+
+        arjun ->me 0.4btc -------
+        vishal ->me 0.2btc      |_____ utxos
+        vikas ->me 0.7btc       |
+        sid ->me 0.1btc---------- 
+   
+    now let suppose i want to buy coffe whose price is 0. 5btc
+    transaction:-
+             input [vikas -> 0.7btc] -------> output[0.5 btc to coffe] && [0.2 btc back to me from me]
+  (only that utxos is greater than 0.5)          (here 0.2 is like change)
+ 
+        arjun ->me 0.4btc -------
+        vishal ->me 0.2btc      |_____ utxos
+        me ->me 0.2btc          |
+        sid ->me 0.1btc---------- 
+
+Transaction fee:-
+        it is the amount of fee you must pa like if coffe cost 0.5 btc then you have to pay 0.6 and that 0.1 goes to miner
+
+Cryptocurrency wallet:-
+        wallet only checks the transaction which i get and  it add up or we say it only count utxos of all blocks
+
+private key and public key:-
+
+    private key se public generate ki
+    private + message se signature create hoga
+    public + Private +signature se verification funct create kiya
+        
+        private key-------------------->public key
+            |                           |
+            |                           |
+            |                           |    
+            0<------ message ---------->0 verification funct
+            |                           |        
+            |                           |
+            |_______>signature----------
+        ex->tool.superdatascience.com
+
+segregated witness:-
+    block size of block chain generally 1 mb
+    1.but in block max size is occupied by signature and public key -->60-65% scriptsig
+    2.after 2017 when too much transaction and miner blockchain commitee decide to sepratly send dignature and public key that's why is called segregated witness
+    3.it is all do to increase the number of transaction
+
+public key vs bitcoin address:-
+    1. bitcoin address derive from public key
+    2. public key transaction karney ke kaam aati hai 
+    3. bitcoin address transaction lene ke kaam aati hai 
+    4. bitcoin addres is like an extra layer of protection
+
+hierarchically deterministic (HD)wallet:-
+    its for privacy of owner
+
+    master private key------->private key 1------->public key 1---->address 1 
+                     |
+                     |
+                     |_______>private key 2------->public key 2---->address 2
+                     |
+                     |
+    
+
+
+
+
+
+    
